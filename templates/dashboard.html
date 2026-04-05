@@ -1,0 +1,17 @@
+<h2>Your Complaints</h2>
+<a href="/add">Add Complaint</a>
+<a href="/logout">Logout</a>
+
+<table border="1">
+<tr>
+<th>ID</th><th>Title</th><th>Status</th>
+</tr>
+
+{% for c in complaints %}
+<tr>
+<td>{{c.id}}</td>
+<td>{{c.title}}</td>
+<td>{{c.status}}</td>
+</tr>
+{% endfor %}
+</table>

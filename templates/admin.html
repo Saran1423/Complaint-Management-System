@@ -1,0 +1,27 @@
+<h2>Admin Panel</h2>
+<a href="/logout">Logout</a>
+
+<table border="1">
+<tr>
+<th>ID</th><th>User</th><th>Title</th><th>Status</th><th>Update</th>
+</tr>
+
+{% for c in complaints %}
+<tr>
+<td>{{c.id}}</td>
+<td>{{c.user}}</td>
+<td>{{c.title}}</td>
+<td>{{c.status}}</td>
+<td>
+<form method="POST" action="/update/{{c.id}}">
+<select name="status">
+<option>Pending</option>
+<option>In Progress</option>
+<option>Resolved</option>
+</select>
+<button type="submit">Update</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</table>
