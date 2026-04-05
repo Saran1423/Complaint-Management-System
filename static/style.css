@@ -1,17 +1,74 @@
 body {
-    font-family: Arial;
-    text-align: center;
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: #f3f0ff;
 }
 
-input, textarea {
-    display: block;
-    margin: 10px auto;
-    padding: 8px;
+/* Navbar */
+.navbar {
+    background: #6a0dad;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Banner */
+.banner {
+    height: 250px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/CMR_University_Bangalore.jpg') center/cover;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Form */
+input, textarea, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 button {
-    padding: 8px 15px;
-    background: blue;
+    background: #6a0dad;
     color: white;
+    padding: 10px;
     border: none;
+    border-radius: 8px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #6a0dad;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
