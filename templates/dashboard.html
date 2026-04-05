@@ -1,11 +1,31 @@
-<h2>Your Complaints</h2>
-<a href="/add">Add Complaint</a>
-<a href="/logout">Logout</a>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
 
-<table border="1">
-<tr>
-<th>ID</th><th>Title</th><th>Status</th>
-</tr>
+<div class="navbar">
+<h2>CMR Complaint System</h2>
+<div>
+<a href="/add">Add</a>
+<a href="/logout">Logout</a>
+</div>
+</div>
+
+<div class="banner"></div>
+
+<div class="container">
+
+<div class="card">
+<h3>Welcome {{session['user']}}</h3>
+</div>
+
+<div class="card">
+<h3>Your Complaints</h3>
+
+<table>
+<tr><th>ID</th><th>Title</th><th>Status</th></tr>
 
 {% for c in complaints %}
 <tr>
@@ -14,4 +34,12 @@
 <td>{{c.status}}</td>
 </tr>
 {% endfor %}
+
 </table>
+
+</div>
+
+</div>
+
+</body>
+</html>
